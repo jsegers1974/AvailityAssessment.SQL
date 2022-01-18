@@ -1,13 +1,13 @@
 /*
-a.	Write a SQL query that will produce a reverse-sorted list (alphabetically by name) of customers (first and last names) whose last name begins with the letter ‘S.’
+a.	Write a SQL query that will produce a reverse-sorted list (alphabetically by name) of customers (first and last names) whose last name begins with the letter â€˜S.â€™
 
 I think the question here is to order by an alias so I ordered desc by 'fullname' alias.
 */
 
-select c.custid, c.lastname, c.firstname, c.firstname + ' ' + c.lastname as fullname
+select c.custid, c.lastname, c.firstname
 from AvailityAssessment1.dbo.customer c
 where c.LastName like 's%'
-order by fullname desc
+order by c.lastname, c.firstname desc
 
 /*
 b.	Write a SQL query that will show the total value of all orders each customer has placed in the past six months. Any customer without any orders should show a $0 value.
