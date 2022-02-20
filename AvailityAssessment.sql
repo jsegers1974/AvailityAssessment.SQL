@@ -1,7 +1,7 @@
 /*
 a.	Write a SQL query that will produce a reverse-sorted list (alphabetically by name) of customers (first and last names) whose last name begins with the letter ‘S.’
 
-I think the question here is to order by an alias so I ordered desc by 'fullname' alias.
+
 */
 
 select c.custid, c.lastname, c.firstname
